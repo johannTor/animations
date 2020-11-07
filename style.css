@@ -1,0 +1,301 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: darksalmon;
+}
+
+.page-header {
+    display: none;
+}
+
+h1 {
+    position: relative;
+    left: -100vw;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 2rem 2rem;
+    transition: all 1s;
+}
+
+.move-in {
+    left: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-link {
+    margin: 0 1rem;
+    padding: 1rem 1rem;
+    border-radius: 10px;
+    color: white;
+    background-color:rgb(190, 109, 100);
+}
+
+.nav-link:hover {
+    animation: pulseBtn 1.5s infinite;
+    animation-timing-function: linear;
+    cursor: default;
+}
+
+.active-link {
+    transform: scale(1.05);
+}
+
+.rect-container {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    transition: all 1s;
+    background-color: black;
+}
+
+.rect-container-js {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    transition: all 1s;
+    background-color: black;
+}
+
+.animation-hidden {
+    left: -50%;
+}
+
+.sub-rect {
+    top: 0%;
+    left: 0px;
+    display: inline-block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+}
+
+.moving-rect {
+    display: inline-block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+}
+
+/* The rectangles for the js animation */
+#rec1 {
+    top: 0;
+    left: 0px;
+}
+
+#rec2 {
+    top: 0;
+    left: 20px;
+}
+
+#rec3 {
+    top: 0;
+    left: 40px;
+}
+
+#rec4 {
+    top: 0;
+    left: 60px;
+}
+
+#rec5 {
+    top: 0;
+    left: 80px;
+}
+
+#rec6 {
+    top: 20px;
+    left:80px;
+}
+
+#rec7 {
+    top: 40px;
+    left:80px;
+}
+
+#rec8 {
+    top: 60px;
+    left:80px;
+}
+
+#rec9 {
+    top: 80px;
+    left:80px;
+}
+
+#rec10 {
+    top: 80px;
+    left:60px;
+}
+
+#rec11 {
+    top: 80px;
+    left:40px;
+}
+
+#rec12 {
+    top: 80px;
+    left:20px;
+}
+
+#rec13 {
+    top: 80px;
+    left: 0px;
+}
+
+#rec14 {
+    top: 60px;
+    left: 0px;
+}
+
+#rec15 {
+    top: 40px;
+    left: 0px;
+}
+
+#rec16 {
+    top: 20px;
+    left: 0px;
+}
+
+.inner-rect {
+    width: 61px;
+    height: 61px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background: white;
+}
+
+/* The two moving css rectangles */
+#rect1 {
+    animation: moverect1 1s infinite alternate;
+    animation-timing-function: ease-in-out;
+}
+
+#rect2 {
+    animation: moverect2 1s infinite alternate;
+    animation-timing-function: ease-in-out;
+}
+
+.circle-container {
+    height: 10rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+}
+
+.circles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.first-circle {
+    width: 50px;
+    height: 50px;
+}
+
+.second-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.third-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.fourth-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.fifth-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+@keyframes pulseBtn {
+    0% {
+        transform: scale(1.0);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+
+@keyframes moverect1 {
+    0% {
+        top: 0px;
+        left: 45px;
+    }
+
+    25% {
+        top: 0px;
+        left: 80px;
+    }
+
+    75% {
+        top: 80px;
+        left: 80px;
+    }
+
+    100% {
+        top: 80px;
+        left: 45px;
+    } 
+
+}
+
+@keyframes moverect2 {
+    0% {
+        top: 0px;
+        left: 45px;
+    }
+
+    25% {
+        top: 0px;
+        left: 0px;
+    }
+
+    75% {
+        top: 80px;
+        left: 0px;
+    }
+
+    100% {
+        top: 80px;
+        left: 45px;
+    } 
+
+}
